@@ -2,27 +2,27 @@
 
 ## Our Domain is "Pharma"
 ### For Data cleaning -> (pipeline)
-step 1. We read the dataset using pandas
-step 2. We perform exploratory data analysis.
-step 3. We removed all the columns which for of no use for eg. Patient_name , Father_name, Family_name, Location etc.
-step 4. Then we noticed there are misleading values, noise , class imbalance and missing values in the given dataset.
-step 5. For which we replaced the misleading values like "-99", "-", "not availabe", "no record", with NaN value.
-step 6. For all sympthoms columns we calculated the count, mean, max, std, min and range.
-step 7. We have grouped all the numerical columns in num_cols and similarly all text cols in cat_cols.
-step 8. For nums_cols we have found the median value and filled all the NaN value with the median value.
-step 9. For cat_cols we put the element with the highest frequency.
-step 10. Then we removed all the duplicated rows.
-step 11. Then we saved the dataframe as train_clean.csv and test_clean.csv.
+- step 1. We read the dataset using pandas
+- step 2. We perform exploratory data analysis.
+- step 3. We removed all the columns which for of no use for eg. Patient_name , Father_name, Family_name, Location etc.
+- step 4. Then we noticed there are misleading values, noise , class imbalance and missing values in the given dataset.
+- step 5. For which we replaced the misleading values like "-99", "-", "not availabe", "no record", with NaN value.
+- step 6. For all sympthoms columns we calculated the count, mean, max, std, min and range.
+- step 7. We have grouped all the numerical columns in num_cols and similarly all text cols in cat_cols.
+- step 8. For nums_cols we have found the median value and filled all the NaN value with the median value.
+- step 9. For cat_cols we put the element with the highest frequency.
+- step 10. Then we removed all the duplicated rows.
+- step 11. Then we saved the dataframe as train_clean.csv and test_clean.csv.
 
 
 ### For Training 
-step 1. We have used the XGBClassifier from the xgboost library which is best for tabular data.
-step 2. we now import the cleaned dataset from our cleaning pipeline.
-step 3. We split the dataset into training and testing part.
-step 4. Then we created our model and we took parameter as -> multi:softmax, depth = 4, and learning rate = 0.1.
-step 5. then we train our model.
-step 6. then we predicted for test dataset.
-step 7. then we just find the f1 score and accuracy.
+- step 1. We have used the XGBClassifier from the xgboost library which is best for tabular data.
+- step 2. we now import the cleaned dataset from our cleaning pipeline.
+- step 3. We split the dataset into training and testing part.
+- step 4. Then we created our model and we took parameter as -> multi:softmax, depth = 4, and learning rate = 0.1.
+- step 5. then we train our model.
+- step 6. then we predicted for test dataset.
+- step 7. then we just find the f1 score and accuracy.
 
 # our model accuracy.
 Model Accuracy for Genetic Disorder: 0.6076981132075472
